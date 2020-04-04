@@ -15,6 +15,10 @@
         $> python manage.py migrate
         $> python manage.py createsuperuser
     ```
+ * Add pre-set db
+     ``` javascript
+        $> python manage.py loaddata db.json
+     ```
  * Run server
     
     ``` javascript
