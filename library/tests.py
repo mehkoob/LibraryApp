@@ -1,10 +1,8 @@
 from django.test import TestCase
-
 # Create your tests here.
 # Using the standard RequestFactory API to create a form POST request
 from rest_framework.test import APIRequestFactory, force_authenticate
-from library.models import User
-from library.views import RegistrationView
+from library.models import User, Book
 
 
 factory = APIRequestFactory()
@@ -19,11 +17,13 @@ request = factory.post('/api/book-create/',  {
 
 print("test book create result", request)
 
+# class BookTestCase(TestCase):
+#     fixtures = ['book.json']
 
-user = User.objects.get(username='olivia')
-view = RegistrationView.as_view()
+#     def setUp(self):
+#         # Test definitions as before.
+#         call_setup_methods()
 
-# Make an authenticated request to the view...
-request1 = factory.get('/accounts/django-superstars/')
-force_authenticate(request1, user=user)
-response = view(request1)
+#     def testFluffyAnimals(self):
+#         # A test that uses the fixtures.
+#         call_some_test_code()

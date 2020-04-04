@@ -130,5 +130,5 @@ REST_FRAMEWORK = {
 TOKEN_EXPIRED_AFTER_SECONDS = 86400
 
 FIXTURE_DIRS = (
-   os.path.join(BASE_DIR, 'library/fixtures')
+   os.path.join(BASE_DIR, 'libarary/fixtures'),
 )
