@@ -61,7 +61,7 @@ class Login(APIView):
                             status=HTTP_404_NOT_FOUND)
         elif user.groups.filter(name='user').exists():
             try:
-                set_time = TimePeriod.objects.last()
+                set_time = TimePeriod.objects.get(user=user)
                 if not set_time.start_time <= datetime.now().time() < set_time.end_time:
                     return Response({'status': 'failed', 'error': 'Not valid time to request user'}) 
             except ObjectDoesNotExist:
