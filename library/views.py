@@ -130,7 +130,7 @@ class RegistrationView(APIView):
             user_obj.first_name = data.get('first_name', user_obj.first_name)
             user_obj.last_name = data.get('last_name', user_obj.last_name)
             user_obj.email = data.get('email', user_obj.email)
-            user_obj.email = data.get('phone_no', user_obj.phone_no)
+            user_obj.phone_no = data.get('phone_no', user_obj.phone_no)
             return Response({'status': 'success'})
         except ObjectDoesNotExist:
             return Response({'status': 'failed','error': 'Object does not exist'},
