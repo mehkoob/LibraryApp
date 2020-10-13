@@ -12,6 +12,7 @@
 * install all requirement by typing
      ``` javascript
         $> pip install -r requirement.txt
+        $> python manage.py makemigrations library
         $> python manage.py migrate
         $> python manage.py createsuperuser
     ```
